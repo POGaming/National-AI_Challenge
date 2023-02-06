@@ -1,0 +1,22 @@
+print("Hello! Thanks for using our app! Please key in your company name!")
+company_name = input("company name: ")
+company_desc = input("company description (what your company does): ")
+data_dictionary = {}
+choice = 1
+while choice!=2:
+  choice = int(input("Type [1] to input new data and [2] to end program "))
+  if choice ==1:
+    this_month = input("current month: ")
+    totalitems_sold = int(input("number of items sold: "))
+    eachproduct_cost = int(input("cost of each product: $"))
+    extra_cost = int(input("any margin profit (eg. rental):$ "))
+    overall_earnings = totalitems_sold*eachproduct_cost-extra_cost
+    data_dictionary [this_month]= overall_earnings
+    if overall_earnings<0:
+      print("ur earnings are too low!! increase the price of ur products!!")
+    elif overall_earnings>0 and overall_earnings <500:
+      print("pretty average earnings!!")
+    elif overall_earnings >0 and overall_earnings>500 and overall_earnings<1000:
+      print("quite rich!!")
+    
+print(data_dictionary)
